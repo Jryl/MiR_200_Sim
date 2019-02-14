@@ -1,5 +1,5 @@
-#base_global_planner: SBPLLatticePlanner
-base_global_planner: GlobalPlanner
+base_global_planner: SBPLLatticePlanner
+#base_global_planner: GlobalPlanner
 #base_global_planner: navfn/NavfnROS
 #base_global_planner: carrot_planner/CarrotPlanner
 
