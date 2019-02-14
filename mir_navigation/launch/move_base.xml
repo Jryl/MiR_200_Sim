@@ -1,5 +1,5 @@
 <launch>
-    <arg name="local_planner"   default="dwa"   doc="Local planner can be either dwa, base, teb or pose"/>
+    <arg name="local_planner"   default="dwb"   doc="Local planner can be either dwa, base, teb or pose"/>
     <arg name="prefix" default="" doc="Prefix used for robot tf frames" /> <!-- used in the config files -->
 
     <node pkg="move_base" type="move_base" respawn="false" name="move_base_node" output="screen" clear_params="true">
