@@ -61,32 +61,14 @@ catkin_make -DCMAKE_BUILD_TYPE=RelWithDebugInfo
 
 # 3. Gazebo demo (existing map)
 ```bash
-### gazebo:
-roslaunch mir_gazebo mir_maze_world.launch
-rosservice call /gazebo/unpause_physics 
-
-### localization:
-roslaunch mir_navigation amcl.launch
-
-### navigation:
-roslaunch mir_navigation start_planner.launch
-rviz -d $(rospack find mir_navigation)/rviz/navigation.rviz
+roslaunch mir_navigation mir_start.launch
 ```
 
 Now, you can use the "2D Nav Goal" tool in RViz to set a navigation goal for move_base.
 
 # 4. Gazebo demo (mapping)
 ```bash
-### gazebo:
-roslaunch mir_gazebo mir_maze_world.launch
-rosservice call /gazebo/unpause_physics  
-
-### mapping:
-roslaunch mir_navigation hector_mapping.launch.xml
-
-### navigation:
-roslaunch mir_navigation move_base.xml
-rviz -d $(rospack find mir_navigation)/rviz/navigation.rviz
+roslaunch mir_navigation mir_mapping.launch
 ```
 
 # 5. Teleoperate the robot with keyboard (optional)
