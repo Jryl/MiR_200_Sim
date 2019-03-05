@@ -1,14 +1,4 @@
-# 1. Package overview
-* `mir_actions`: Action definitions for the MiR robot
-* `mir_description`: URDF description of the MiR robot
-* `mir_dwb_critics`: Plugins for the dwb_local_planner used in Gazebo
-* `mir_driver`: A reverse ROS bridge for the MiR robot
-* `mir_gazebo`: Simulation specific launch and configuration files for the MiR robot
-* `mir_msgs`: Message definitions for the MiR robot
-* `mir_navigation`: move_base launch and configuration files
-
-
-# 2. Installation
+# 1. Installation
 The instructions below use the ROS distro `kinetic` as an example.
 
 ### Preliminaries
@@ -59,16 +49,21 @@ catkin_make -DCMAKE_BUILD_TYPE=RelWithDebugInfo
 ```
 
 
-# 3. Gazebo demo (existing map)
+# 2. Gazebo demo (existing map)
 ```bash
 roslaunch mir_navigation mir_start.launch
 ```
 
 Now, you can use the "2D Nav Goal" tool in RViz to set a navigation goal for move_base.
 
-# 4. Gazebo demo (mapping)
+# 3. Gazebo demo (mapping)
 ```bash
 roslaunch mir_navigation mir_mapping.launch
+```
+
+# 4. Go2goal (optional)
+```bash
+rosrun mir_navigation goal_target.py
 ```
 
 # 5. Teleoperate the robot with keyboard (optional)
