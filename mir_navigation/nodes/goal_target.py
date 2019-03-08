@@ -17,14 +17,14 @@ class map_navigation():
 
     choice='q'
 
-    rospy.loginfo("|-------------------------------|")
+    rospy.loginfo("|-----------------------------|")
     rospy.loginfo("|PRESSE A KEY:")
     rospy.loginfo("|'1': Goal_1: (3.0 , 1.5)")
-    rospy.loginfo("|'2': Goal_2: (1.0 , 5.0) ")
-    rospy.loginfo("|'3': Goal_3: (-1.0 , 8.0) ")
+    rospy.loginfo("|'2': Goal_2: (0.0 , 7.0) ")
+    rospy.loginfo("|'3': Goal_3: (-8.0 , 1.5) ")
     rospy.loginfo("|'4': Goal_4: (0.0 , 0.0) ")
     rospy.loginfo("|'0': Quit ")
-    rospy.loginfo("|-------------------------------|")
+    rospy.loginfo("|-----------------------------|")
     rospy.loginfo("|WHERE TO GO?")
     choice = input()
     return choice
@@ -40,11 +40,11 @@ class map_navigation():
     self.xGoal_1 = 3.0
     self.yGoal_1 = 1.5
 
-    self.xGoal_2 = 1.0
-    self.yGoal_2 = 5.0
+    self.xGoal_2 = 0.0
+    self.yGoal_2 = 7.0
 
-    self.xGoal_3 = -1.0
-    self.yGoal_3 = 8.0
+    self.xGoal_3 = -8.0
+    self.yGoal_3 = 1.5
 
     self.xGoal_4 = 0.0
     self.yGoal_4 = 0.0
@@ -173,7 +173,7 @@ class map_navigation():
           i += 2
         #print(i)
 
-        rospy.loginfo("Path_length: %.3f cm"%path_length)
+        rospy.loginfo("Path_length: %.3f m"%path_length)
         self.xy = [] # clear the xy list after goal arrived
 
         return True
